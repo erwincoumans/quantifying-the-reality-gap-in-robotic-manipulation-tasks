@@ -39,7 +39,7 @@ class VREP(object):
         vrep.simxFinish(-1) # just in case, close all opened connections
         self._clientID=vrep.simxStart('127.0.0.1',19997,True,False,5000,5) # Connect to V-REP
         
-        vrep.simxLoadScene(self._clientID, "kinova_description/urdf/Kinova5.ttt", 1, vrep.simx_opmode_blocking)
+        vrep.simxLoadScene(self._clientID, "kinova_description/urdf/m1n6s300.ttt", 1, vrep.simx_opmode_blocking)
         
         errorCode,self._arm_joints[0] = vrep.simxGetObjectHandle(self._clientID, 'm1n6s300_joint_1', vrep.simx_opmode_blocking)
         errorCode,self._arm_joints[1] = vrep.simxGetObjectHandle(self._clientID, 'm1n6s300_joint_2', vrep.simx_opmode_blocking)
