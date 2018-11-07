@@ -357,8 +357,9 @@
       <mechanicalReduction>160</mechanicalReduction>
     </actuator>
   </transmission>
+  <!-->
   <link name="m1n6s300_end_effector">
-    <!--visual>
+    <visual>
                 <geometry>
                     <box size = "0.01 0.01 0.01"/>
                 </geometry>
@@ -367,7 +368,7 @@
                 <geometry>
                     <box size = "0.01 0.01 0.01"/>
                 </geometry>
-            </collision-->
+            </collision>
   </link>
   <joint name="m1n6s300_joint_end_effector" type="fixed">
     <parent link="m1n6s300_link_6"/>
@@ -376,6 +377,7 @@
     <limit effort="2000" lower="0" upper="0" velocity="1"/>
     <origin rpy="3.14159265359 0 0" xyz="0 0 -0.1600"/>
   </joint>
+  <-->
   <link name="m1n6s300_link_finger_1">
     <visual>
       <geometry>

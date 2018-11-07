@@ -53,9 +53,7 @@ def set_target_thetas(num_steps, pid, experiment,simulator, simStep):
             pid[3].set_target_theta(90)
         else:
             return pid
-    if simulator == "PyBullet":
-        pid = pid[-2:] + pid[0:-2]
-
+    
     return pid
     
 def open_vrep():
